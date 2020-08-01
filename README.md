@@ -51,6 +51,7 @@ Time taken in seconds -  3.3819386959075928
 <h3 align="center">
 <img alt="GIL" src="assets/multi.png" />
 </h3>
+
 ```
 $ python multi_threaded.py
 Time taken in seconds - 4.140527248382568
