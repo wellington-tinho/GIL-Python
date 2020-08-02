@@ -1,17 +1,18 @@
 
 <h3 align="center">
-    <img alt="GIL" src="/assets/GIL.png" width="250px"/>
+    	<img alt="GIL" src="/assets/GIL.png" width="250px"/>
 
-GIL em Python
+	GIL em Python
 </h3>
 
 <p align="center">
-  <a href="#gil?">O que é GIL</a> | 
+  <a href="#gil">O que é GIL</a> | 
 	<a href="#usabilidade">Para que é usado</a> |  
   <a href="#impacto">Impacto nos programas</a> 
 </p>
 
-<h2 id="giç?">O que é GIL?</h2>
+<h2 id="gil">O que é GIL?</h2>
+
 GIL é o acronimo para _Global Interpreter Lock_.
 
 O Python _Global Interpreter Lock_, ou simplesmente GIL, é um mutex (ou _lock_) que permite que apenas uma _thread_ tome conta do interpretador Python.
@@ -20,6 +21,7 @@ Isso significa que somente uma _thread_ pode estar em um estado de execução em
 ___
 
 <h2 id="usabilidade">Para que é usado? </h2> 
+
 Quando é declarado uma variavel em Python, ex: `x = 10`, este não aloca um local de memória onde 10 está armazenado, e sim cria um objeto na memória _heap_ onde x conterá uma referência para o objeto 10.
 
 No caso de x posteriormente receber None, ex: `x = None`, Python irá verificar que o numero de referências ao objeto, que no caso por agora não conter uma referencia para o mesmo, terá 0 referências, e será setado como _"Dead Object"_ pelo algoritmo _"Garbage Collector"_, (Coletor de lixo).
@@ -31,7 +33,7 @@ O problema é que essa forma de gerenciamento de memória utilizando reference c
 
 Devido a isso é usado o GIL, aplicando a regra de execução de qualquer código Python a _single lock_ previnindo qualquer _Deadlock_ [^1], que por outro lado transforma qualquer código Python em _single-thread_.
 
-[^1]: _Deadlok_ pode ser traduzido informalmente para Impasse, onde no cenario da Ciência da Computação é usado quando dois ou mais processos ficam impedidos de continuar suas execuções devido um bloqueiar o outro. 
+[^1]: _Deadlock_ pode ser traduzido informalmente para Impasse, onde no cenario da Ciência da Computação é usado quando dois ou mais processos ficam impedidos de continuar suas execuções devido um bloqueiar o outro. 
 
 ___
 
@@ -75,10 +77,12 @@ Referente a figura acima podemos notar que _multiprocessing_ está acima do GIL,
 $ python multiprocessing.py
 Time taken in seconds - 1.8036038875579834
 ```
-Tivemos uma melhora na performance incrível!!
+Tivemos uma melhora incrível na performance !!
 
 Que fique claro que multi-processing são mais 'pesados' que multi-threading.
 Ou seja, lembre-se que para cada processo, teremos um ambiente Python próprio e isso pode se tornar um gargalo de memoria.
+
+Obrigado por ler até aqui, espero que tenha gostado, sinta-se a vontade para enviar um pull-request se necessário.
 ___
 
 ## :memo: Licença
