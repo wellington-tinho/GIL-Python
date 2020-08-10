@@ -82,7 +82,7 @@ Tivemos uma melhora incrível na performance !!
 Que fique claro que multi-processing são mais 'pesados' que multi-threading.
 Ou seja, lembre-se que para cada processo, teremos um ambiente Python próprio e isso pode se tornar um gargalo de memoria.
 
-Obrigado por ler até aqui, espero que tenha gostado, sinta-se a vontade para enviar um pull-request se necessário.
+Obrigado por ler até aqui, espero que tenha gostado.
 ___
 
 ## :memo: Licença
